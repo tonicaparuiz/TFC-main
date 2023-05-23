@@ -17,10 +17,12 @@ function Nav () {
         <Container fluid>
         <Card bg='dark'
         text='light'
-        className='col-lg-12'>
-        <Card.Body >
-        <nav>
+        className='menu'
+        >
+        <Card.Body>
+        <nav className='float-start'>
         <img className='d-inline-block align-top' src={logo} alt="Logo" id='logo'/>
+        <div id='menu' className='m-0 row justify-content-center '>
         <ul>
           <li>
             <Link to="/" className="menu-link col">Home</Link>
@@ -32,6 +34,7 @@ function Nav () {
             <Link to="/data" className="menu-link col">Datos</Link>
           </li>
         </ul>
+        </div>
       </nav>
         </Card.Body>
         </Card>

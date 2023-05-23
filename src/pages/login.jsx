@@ -49,7 +49,7 @@ function Login() {
    */
   return (
     <Card style={{ width: "22rem", height: "27rem" }}
-      className="">
+      className="m-0 justify-content-center aling-items-center row vh-100">
       <div className="login-wrapper">
         <br></br>
         <h2>Inicio de sesión</h2>
