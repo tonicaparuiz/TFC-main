@@ -6,6 +6,7 @@ import Home from './pages/home'
 import Login from './pages/login'
 import Data from './pages/data';
 import Notfound from './pages/notfound';
+import Teapot from './pages/teapot';
 
 function App() {
   
@@ -28,7 +29,9 @@ function App() {
             <Route index element={<Home/>}/>
             <Route path='login' element={<Login/>}/>
             <Route path='data' element={<Data/>}/>
-            <Route path='notfound' element={<Notfound/>}/>
+            <Route path='*' element={<Notfound/>}/>
+            <Route path='teapot' element={<Teapot/>}/>
+
           </Route>
         </Routes>
       </BrowserRouter>

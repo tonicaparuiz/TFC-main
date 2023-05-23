@@ -2,6 +2,7 @@ import React from "react";
 import Axios from "axios";
 import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
+import { Container } from "react-bootstrap";
 
 
 const BaseURL =
@@ -24,7 +25,8 @@ function Data() {
   if (!datos) return null;
 
   return (
-   <Card style={{margin:"100px"}}
+    <Container fluid>
+      <Card style={{margin:"100px"}}
    className="text-center">
      <div>
     {/**
@@ -40,7 +42,7 @@ function Data() {
      <small>{datos.RFID}</small>
      </Card.Text>
      <Card.Body>
-     <Table striped bordered hover size="sm">
+     <Table striped bordered hover responsive size="sm">
       <tbody>
       <tr>
           <th>ID</th>
@@ -69,6 +71,7 @@ function Data() {
      </Card.Body>
     </div>
    </Card>
+    </Container>
   );
 }
 

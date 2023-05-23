@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import {Outlet, Link} from 'react-router-dom';
 import logo from '../pages/img/logo.png';
 
@@ -14,28 +14,28 @@ import logo from '../pages/img/logo.png';
 function Nav () {
     return (
         <>
+        <Container fluid>
         <Card bg='dark'
-        text='light'>
+        text='light'
+        className='col-lg-12'>
         <Card.Body >
         <nav>
-        <img src={logo} width="70" height="70" alt="Logo" id='logo'/>
+        <img className='d-inline-block align-top' src={logo} alt="Logo" id='logo'/>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="menu-link col">Home</Link>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/login" className="menu-link col">Login</Link>
           </li>
           <li>
-            <Link to="/data">Datos</Link>
-          </li>
-          <li>
-            <Link to="/notfound">Not Found Test</Link>
+            <Link to="/data" className="menu-link col">Datos</Link>
           </li>
         </ul>
       </nav>
         </Card.Body>
         </Card>
+        </Container>
       <Outlet />
         </>
     );

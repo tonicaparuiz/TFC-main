@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Card } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
-import logo from '../pages/img/logo.png';
 
 
 
@@ -49,9 +48,8 @@ function Login() {
    *    o crear un componente forms personalizado usando componentes
    */
   return (
-    <Card style={{ width: "22rem", marginLeft: "780px", marginTop: "100px", height: "27rem" }}
-      className="lg-5">
-      <img src={logo} width="100" height="100" alt="Logo" id='logo1'/>
+    <Card style={{ width: "22rem", height: "27rem" }}
+      className="">
       <div className="login-wrapper">
         <br></br>
         <h2>Inicio de sesión</h2>
@@ -66,6 +64,7 @@ function Login() {
           />
           <br></br>
           <br></br>
+          <label for="pass"></label>
           <input
             type="password"
             value={pass}
