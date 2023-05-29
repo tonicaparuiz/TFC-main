@@ -48,9 +48,13 @@ function Login() {
    *    o crear un componente forms personalizado usando componentes
    */
   return (
-<Card className="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto mt-5">
+<Card className="col-12 col-sm-8 col-md-6 col-lg-3 mx-auto mt-5">
+<br/>
+<br/>
   <Card.Body>
     <h2 className="text-center">Inicio de sesión</h2>
+    <br/>
+    <br/>
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId="formUsuario">
         <Form.Control
@@ -72,6 +76,7 @@ function Login() {
           className="mx-auto"
         />
       </Form.Group>
+      <br/>
       <div className="d-grid gap-2">
         <Button variant="primary" type="submit">
           Iniciar sesión

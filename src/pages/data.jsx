@@ -27,6 +27,18 @@ function Data() {
 
   return (
     <Container fluid>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Card
    className="text-center">
      <div>

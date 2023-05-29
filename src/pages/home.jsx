@@ -2,6 +2,9 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import WebImg from '../pages/img/web_img.jpg';
+import apiImg from '../pages/img/apiImg.png';
+import lectorImg from '../pages/img/FO90H03JF2SVQQZ.jpg';
 
 
 function Home() {
@@ -33,39 +36,41 @@ function Home() {
         xs={12}>
         <Card>
           <Card.Header className="float-left">
-
-            <Card.Title>
-              <h1>Parte Back-end</h1>
-            </Card.Title>
+          <Card.Img variant="top" src={apiImg} />
           </Card.Header>
           <Card.Body>
-            <p>La parte back-end, esta formada por un servicio web, el cual está conectado con una base de datos y se encarga de gestionar la información solicitada por parte del front-end</p>
+          <Card.Title>
+              Parte Back-end
+            </Card.Title>
+            <Card.Text>La parte back-end, esta formada por un servicio web, el cual está conectado con una base de datos y se encarga de gestionar la información solicitada por parte del front-end</Card.Text>
           </Card.Body>
         </Card>
           </Col>
           <Col lg={4}
-          xs={12}>
+        xs={12}>
         <Card>
           <Card.Header className="float-left">
-            <Card.Title>
-              <h1>Parte Front-end</h1>
-            </Card.Title>
+          <Card.Img variant="top" src={WebImg} />
           </Card.Header>
           <Card.Body>
-            <p>Se encarga de mostrar los datos de la forma más intuitiva para el cliente. </p>
+          <Card.Title>
+          Parte Front-end
+            </Card.Title>
+            <Card.Text>Se encarga de mostrar los datos de la forma más intuitiva para el cliente. </Card.Text>
           </Card.Body>
         </Card>
           </Col>
           <Col lg={4}
-          xs={12}>
+        xs={12}>
         <Card>
           <Card.Header className="float-left">
-            <Card.Title>
-              <h1>Parte Física</h1>
-            </Card.Title>
+          <Card.Img variant="top" src={lectorImg} />
           </Card.Header>
           <Card.Body>
-            <p>Se encarga mediante el ESP32 y el cableado interno de solicitarle información a la API REST y una vez obtenida la respuesta abrir o cerrar la puerta.</p>
+          <Card.Title>
+          Parte Física
+            </Card.Title>
+            <Card.Text>Se encarga mediante el ESP32 y el cableado interno de solicitarle información a la API REST y una vez obtenida la respuesta abrir o cerrar la puerta.</Card.Text>
           </Card.Body>
         </Card>
           </Col>
