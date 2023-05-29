@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, Container } from 'react-bootstrap';
-import {Outlet, Link} from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 import logo from '../pages/img/logo.png';
+import { Container, Row, Col, Card, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
   /*
     Usamos los componentes Outlet y Link de react-router-dom para conseguir 
@@ -11,38 +12,39 @@ import logo from '../pages/img/logo.png';
         es decir, sirve para renderizar elementos hijos de este componente.
   */
 
-function Nav () {
+function Menu () {
     return (
         <>
         <Container fluid>
-        <Card bg='dark'
-        text='light'
-        className='menu'
-        >
-        <Card.Body>
-        <nav className='float-start'>
-        <img className='d-inline-block align-top' src={logo} alt="Logo" id='logo'/>
-        <div id='menu' className='m-0 row justify-content-center '>
-        <ul>
-          <li>
-            <Link to="/" className="menu-link col">Home</Link>
-          </li>
-          <li>
-            <Link to="/login" className="menu-link col">Login</Link>
-          </li>
-          <li>
-            <Link to="/data" className="menu-link col">Datos</Link>
-          </li>
-        </ul>
-        </div>
-      </nav>
-        </Card.Body>
-        </Card>
-        </Container>
+  <Row xs={12}>
+    <Card bg="dark" text="light" className="menu">
+      <Card.Body>
+        <Row className="align-items-center">
+          <Col xs={12} sm={3} md={2} lg={1}>
+            <img className="d-inline-block align-top" src={logo} alt="Logo" id="logo" />
+          </Col>
+          <Col xs={12} sm={8} md={9} lg={10}>
+            <Nav  variant="tabs" className="justify-content-start">
+              <Nav.Item>
+                <Link to="/" className="nav-link">Home</Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link to="/login" className="nav-link">Login</Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link to="/data" className="nav-link">Datos</Link>
+              </Nav.Item>
+            </Nav>
+          </Col>
+        </Row>
+      </Card.Body>
+    </Card>
+  </Row>
+</Container>
       <Outlet />
         </>
     );
 };
 
 
-export default Nav;
+export default Menu;

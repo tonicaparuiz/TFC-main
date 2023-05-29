@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Card } from "react-bootstrap";
-import Button from 'react-bootstrap/Button';
+import { Card, Button, Form} from 'react-bootstrap';
+
 
 
 
@@ -48,39 +48,39 @@ function Login() {
    *    o crear un componente forms personalizado usando componentes
    */
   return (
-    <Card style={{ width: "22rem", height: "27rem" }}
-      className="m-0 justify-content-center aling-items-center row vh-100">
-      <div className="login-wrapper">
-        <br></br>
-        <h2>Inicio de sesión</h2>
-        <form onSubmit={handleSubmit}>
-          <br></br>
-          <input
-            type="text"
-            value={nombre}
-            onSubmit={(e) => setNombre(e.target.value)}
-            name="usuario"
-            placeholder="Usuario"
-          />
-          <br></br>
-          <br></br>
-          <label for="pass"></label>
-          <input
-            type="password"
-            value={pass}
-            onSubmit={(e) => setPass(e.target.value)}
-            name="pass"
-            placeholder="Contraseña"
-          />
-          <br></br>
-          <br></br>
-          <Button variant="primary" type="submit">
-            Iniciar sesión
-          </Button>
-        </form>
-        <p id="error"></p>
+<Card className="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto mt-5">
+  <Card.Body>
+    <h2 className="text-center">Inicio de sesión</h2>
+    <Form onSubmit={handleSubmit}>
+      <Form.Group controlId="formUsuario">
+        <Form.Control
+          type="text"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+          name="usuario"
+          placeholder="Usuario"
+          className="mx-auto"
+        />
+      </Form.Group>
+      <Form.Group controlId="formPassword">
+        <Form.Control
+          type="password"
+          value={pass}
+          onChange={(e) => setPass(e.target.value)}
+          name="pass"
+          placeholder="Contraseña"
+          className="mx-auto"
+        />
+      </Form.Group>
+      <div className="d-grid gap-2">
+        <Button variant="primary" type="submit">
+          Iniciar sesión
+        </Button>
       </div>
-    </Card>
+    </Form>
+    <p id="error"></p>
+  </Card.Body>
+</Card>
   );
 }
 
