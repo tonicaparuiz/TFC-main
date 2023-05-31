@@ -7,7 +7,7 @@ import Login from './pages/login'
 import Data from './pages/data';
 import Notfound from './pages/notfound';
 import Teapot from './pages/teapot';
-
+import Footer from './pages/footer';
 
 function App() {
   
@@ -32,10 +32,11 @@ function App() {
             <Route path='data' element={<Data/>}/>
             <Route path='*' element={<Notfound/>}/>
             <Route path='teapot' element={<Teapot/>}/>
-
+            <Route path='/' element={<Footer/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </>
   );
 }

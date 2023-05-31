@@ -2,7 +2,7 @@ import React from "react";
 import Axios from "axios";
 import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 
 
 
@@ -36,10 +36,6 @@ function Data() {
       <br/>
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       <Card
    className="text-center">
      <div>
@@ -56,6 +52,9 @@ function Data() {
      <small>{datos.RFID}</small>
      </Card.Text>
      <Card.Body>
+     <Button className="float-end" size="sm" variant="success">Crear</Button>{' '}
+     <br/>
+     <br/>
      <Table striped bordered hover responsive size="sm">
       <tbody>
       <tr>
@@ -63,6 +62,7 @@ function Data() {
           <th>Dirección</th>
           <th>Código Postal</th>
           <th>Ciudad</th>
+          <th></th>
         </tr>
       </tbody>
         
@@ -77,6 +77,11 @@ function Data() {
               <td>{valor.Direccion}</td>
               <td>{valor.CodigoPostal}</td>
               <td>{valor.Ciudad}</td>
+              <td>
+              <Button size="sm" variant="primary">Editar</Button>{' '}
+              <Button size="sm" variant="danger">Borrar</Button>{' '}
+
+              </td>
             </tr>
           );
         })}
@@ -85,6 +90,12 @@ function Data() {
      </Card.Body>
     </div>
    </Card>
+   <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </Container>
   );
 }

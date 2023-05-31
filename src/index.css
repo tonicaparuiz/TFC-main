@@ -27,3 +27,39 @@ body {
   background-color: white;
   color: black;
 }
+.logo-image {
+  width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: auto;
+}
+html,
+body,
+#root {
+  height: auto;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #343a40; /* Cambia el color de fondo según tus necesidades */
+  color: #fff; /* Cambia el color del texto según tus necesidades */
+  padding: 20px;
+  
+}
+
+.footer-content {
+  margin-top: 20px;
+}
+
+.footer-bottom {
+  padding: 10px 0;
+  background-color: #212529; /* Cambia el color de fondo según tus necesidades */
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+}

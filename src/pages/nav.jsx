@@ -4,6 +4,7 @@ import logo from '../pages/img/logo.png';
 import { Container, Row, Col, Card, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
   /*
     Usamos los componentes Outlet y Link de react-router-dom para conseguir 
     el enrutado de las vistas dentro de un componente padre.

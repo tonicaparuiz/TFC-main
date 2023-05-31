@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Card, Button, Form} from 'react-bootstrap';
-
-
+import image from '../pages/img/logo.png';
 
 
 /**
@@ -48,10 +47,13 @@ function Login() {
    *    o crear un componente forms personalizado usando componentes
    */
   return (
-<Card className="col-12 col-sm-8 col-md-6 col-lg-3 mx-auto mt-5">
+    <div>
+      <Card className="col-12 col-sm-8 col-md-6 col-lg-3 mx-auto mt-5">
 <br/>
 <br/>
-  <Card.Body>
+<div className="text-center mt-3">
+        <img src={image} alt="Logo" className="logo-image" />
+      </div>  <Card.Body>
     <h2 className="text-center">Inicio de sesión</h2>
     <br/>
     <br/>
@@ -86,6 +88,18 @@ function Login() {
     <p id="error"></p>
   </Card.Body>
 </Card>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
   );
 }
 
