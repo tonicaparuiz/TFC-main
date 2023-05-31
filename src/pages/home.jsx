@@ -76,6 +76,7 @@ function Home() {
           </Col>
         </Row>
         </Card>
+        
       </div>
     </>
   );
