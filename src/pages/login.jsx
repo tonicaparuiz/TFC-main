@@ -53,12 +53,13 @@ function Login() {
 <br/>
 <div className="text-center mt-3">
         <img src={image} alt="Logo" className="logo-image" />
-      </div>  <Card.Body>
+      </div>  
+      <Card.Body>
     <h2 className="text-center">Inicio de sesión</h2>
     <br/>
     <br/>
     <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="formUsuario">
+      <Form.Group id="wrapper" controlId="formUsuario">
         <Form.Control
           type="text"
           value={nombre}
@@ -68,7 +69,8 @@ function Login() {
           className="mx-auto"
         />
       </Form.Group>
-      <Form.Group controlId="formPassword">
+      <br/>
+      <Form.Group id="wrapper" controlId="formPassword">
         <Form.Control
           type="password"
           value={pass}
@@ -78,6 +80,7 @@ function Login() {
           className="mx-auto"
         />
       </Form.Group>
+      <br/>
       <br/>
       <div className="d-grid gap-2">
         <Button variant="primary" type="submit">
